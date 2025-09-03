@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
-import { Search, Filter, Plus, Package, QrCode } from 'lucide-react';
+import { Search, Filter, Plus, Package } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { mockEquipment, mockBlocks } from '../../data/mockData';
 import { EquipmentCard } from './EquipmentCard';
-import { Equipment, Block } from '../../types';
 
 export const EquipmentList: React.FC = () => {
   const { t } = useLanguage();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedBlock, setSelectedBlock] = useState<string>('all');
   const [selectedStatus, setSelectedStatus] = useState<string>('all');
-  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
 
   const filteredEquipment = mockEquipment.filter(equipment => {
     const matchesSearch = equipment.productName.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -31,7 +29,6 @@ export const EquipmentList: React.FC = () => {
           <p className="text-gray-600">{t('equipment.subtitle')}</p>
         </div>
         <button 
-          onClick={() => setIsAddModalOpen(true)}
           className="mt-4 sm:mt-0 inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
         >
           <Plus className="h-4 w-4 mr-2" />

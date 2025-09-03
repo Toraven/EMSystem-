@@ -1,7 +1,7 @@
 import React from 'react';
-import { Clock, AlertCircle, Wrench } from 'lucide-react';
+import { Clock, Wrench } from 'lucide-react';
 import { mockWorkOrders, mockConsumables, mockEquipment } from '../../data/mockData';
-import { formatDate, getDaysUntilDue } from '../../utils/dateHelpers';
+import { getDaysUntilDue } from '../../utils/dateHelpers';
 
 export const UpcomingTasks: React.FC = () => {
   const openWorkOrders = mockWorkOrders.filter(wo => wo.status === 'open');

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BarChart3, FileText, Download, Calendar, TrendingUp, Package, Users, Wrench } from 'lucide-react';
+import { BarChart3, Download, Calendar, TrendingUp, Package, Users, Wrench } from 'lucide-react';
 import { mockEquipment, mockWorkOrders, mockConsumables, mockBlocks, mockUsers } from '../../data/mockData';
 import { formatDate } from '../../utils/dateHelpers';
 
@@ -7,7 +7,7 @@ interface ReportCard {
   id: string;
   title: string;
   description: string;
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType<{ className?: string }>;
   type: 'equipment' | 'maintenance' | 'compliance' | 'usage';
 }
 

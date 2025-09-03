@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Settings, Bell, Shield, Database, Mail, Globe, Save, AlertCircle } from 'lucide-react';
+import { Settings, Bell, Shield, Database, Mail, Save, AlertCircle } from 'lucide-react';
 
 interface SettingSection {
   id: string;
   title: string;
   description: string;
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType<{ className?: string }>;
 }
 
 const settingSections: SettingSection[] = [
@@ -73,7 +73,7 @@ export const SettingsView: React.FC = () => {
     }
   });
 
-  const updateSetting = (section: string, key: string, value: any) => {
+  const updateSetting = (section: string, key: string, value: string | boolean | number) => {
     setSettings(prev => ({
       ...prev,
       [section]: {

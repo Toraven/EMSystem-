@@ -3,7 +3,7 @@ import { Clock, Package, AlertTriangle, Plus, Search } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { mockConsumables, mockEquipment } from '../../data/mockData';
 import { formatDate, getDaysUntilDue } from '../../utils/dateHelpers';
-import { getConsumableStatusColor, formatStatusText } from '../../utils/statusHelpers';
+import { getConsumableStatusColor } from '../../utils/statusHelpers';
 
 export const ConsumablesView: React.FC = () => {
   const { t } = useLanguage();

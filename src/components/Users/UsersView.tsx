@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Search, Plus, User, Mail, Shield, Edit, Trash2 } from 'lucide-react';
 import { mockUsers } from '../../data/mockData';
 import { formatDate } from '../../utils/dateHelpers';
-import { User as UserType } from '../../types';
 
 export const UsersView: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');

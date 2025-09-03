@@ -1,10 +1,10 @@
 import React from 'react';
-import { MapPin, Calendar, QrCode, MoreVertical, Wrench, AlertCircle } from 'lucide-react';
+import { MapPin, QrCode, MoreVertical, Wrench, AlertCircle } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { Equipment } from '../../types';
 import { mockBlocks } from '../../data/mockData';
 import { formatDate, getDaysUntilDue, isOverdue } from '../../utils/dateHelpers';
-import { getStatusColor, formatStatusText } from '../../utils/statusHelpers';
+import { getStatusColor } from '../../utils/statusHelpers';
 
 interface EquipmentCardProps {
   equipment: Equipment;

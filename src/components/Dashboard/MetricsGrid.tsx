@@ -1,12 +1,12 @@
 import React from 'react';
-import { Package, Wrench, Clock, AlertTriangle, TrendingUp } from 'lucide-react';
+import { Package, Wrench, AlertTriangle, TrendingUp } from 'lucide-react';
 import { mockDashboardMetrics } from '../../data/mockData';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 interface MetricCardProps {
   title: string;
   value: string | number;
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType<{ className?: string }>;
   color: string;
   change?: string;
   trend?: 'up' | 'down';

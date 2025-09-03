@@ -335,8 +335,6 @@ const translations = {
     'settings.emailNotificationsDesc': 'Отправлять оповещения по электронной почте',
     'settings.inAppNotifications': 'Уведомления в приложении',
     'settings.inAppNotificationsDesc': 'Показывать уведомления в приложении',
-    'settings.language': 'Язык',
-    'settings.selectLanguage': 'Выберите язык',
     
     // Common
     'common.loading': 'Загрузка...',
